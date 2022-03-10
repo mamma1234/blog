@@ -9,6 +9,12 @@
                 <h1>Blog Show Page</h1>
                 <p>Blog title: {{$blog->title}}</p>
                 <p>Blog Description: {{$blog->description}}</p>
+
+                <div>
+                    @foreach($blog->comments as $comment)
+                        <p>{{ $comment->body }}</p>
+                    @endforeach
+                </div>
                 <form action="{{ route('comments.store') }}" method="POST">
                     @csrf
                     <input type="hidden" name="blog_id"  value={{$blog->id}}><br>

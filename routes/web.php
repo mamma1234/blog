@@ -36,3 +36,6 @@ Route::get('user/{id}', 'UserDetailController@show')->name('user.details.show');
 
 Route::get('/blogs/{id}', 'BlogController@show')->name('blogs.show');
 Route::post('/comments', 'CommentController@store')->name('comments.store');
+
+Route::get('/postcreate', 'PostController@create')->name('posts.create');
+Route::post('/posts', 'PostController@store')->name('posts.store');

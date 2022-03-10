@@ -35,7 +35,14 @@ class BlogController extends Controller
 
     public function show($id)
     {
-        $blog = Blog::where('id', $id)->firstOrFail();
+        // $blog = Blog::where('id', $id)->firstOrFail();
+        $blog = Blog::with(['comments'])->where('id', $id)->firstOrFail();
+
+        // dd($blog);
         return view('blogs.show', compact('blog'));
+
+
     }
+
+
 }
