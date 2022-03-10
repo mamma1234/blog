@@ -27,3 +27,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/home/show', 'HomeController@show')->name('home.show');
 
 Route::resource('photos', 'PhotoController');
+
+Route::get('/create', 'BlogController@create')->name('blogs.create');
+Route::post('/create', 'BlogController@store')->name('blogs.store');
