@@ -32,4 +32,10 @@ class BlogController extends Controller
         ]);
         return redirect()->back();
     }
+
+    public function show($id)
+    {
+        $blog = Blog::where('id', $id)->firstOrFail();
+        return view('blogs.show', compact('blog'));
+    }
 }
