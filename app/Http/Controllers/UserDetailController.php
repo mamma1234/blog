@@ -15,7 +15,7 @@ class UserDetailController extends Controller
         // $user = User::find($id)->userDetail;
         // dd($user);
 
-        $user_detail = UserDetail::find($id);
+        $user_detail = UserDetail::find($id)->user;
         dd($user_detail);
     }
 }
