@@ -74,7 +74,12 @@
 
         <main class="py-4">
             @yield('content')
+            @yield('content1')
         </main>
+
+        <div>
+            tail
+        </div>
     </div>
 </body>
 </html>

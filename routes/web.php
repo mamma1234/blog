@@ -17,6 +17,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/example', function () {
+    return view('example');
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home/show', 'HomeController@show')->name('home.show');
+
+Route::resource('photos', 'PhotoController');
