@@ -58,3 +58,6 @@ Route::get('/collect', function () {
 Route::get('/enter', function () {
     dd('testing');
 })->middleware('checkage');
+
+
+Route::get('/pagination', 'PaginationController@index')->name('pagination');
