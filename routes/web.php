@@ -54,3 +54,7 @@ Route::get('/collect', function () {
 
     dd($collection);
 });
+
+Route::get('/enter', function () {
+    dd('testing');
+})->middleware('checkage');
