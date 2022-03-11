@@ -17,4 +17,11 @@ class CommentController extends Controller
 
         return redirect()->back();
     }
+
+    public function index()
+    {
+        // $comments = Comment::all();
+        $comments = Comment::with('blog')->get();
+        return view('comments.index', compact('comments'));
+    }
 }

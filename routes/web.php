@@ -40,4 +40,6 @@ Route::post('/comments', 'CommentController@store')->name('comments.store');
 Route::get('/postcreate', 'PostController@create')->name('posts.create');
 Route::post('/posts', 'PostController@store')->name('posts.store');
 
-Route::get('/jsonsample', 'JsonSampleController@create')->name('jsonsample');
+Route::get('/jsonsample', 'JsonSampleController@index')->name('jsonsample');
+
+Route::get('/comments', 'CommentController@index')->name('comments.index');
