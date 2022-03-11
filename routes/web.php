@@ -43,3 +43,14 @@ Route::post('/posts', 'PostController@store')->name('posts.store');
 Route::get('/jsonsample', 'JsonSampleController@index')->name('jsonsample');
 
 Route::get('/comments', 'CommentController@index')->name('comments.index');
+
+
+Route::get('/collect', function () {
+    $collection = collect(['taylor', 'abigail', null])->map(function ($name) {
+        return strtoupper($name);
+    })->reject(function ($name) {
+        return empty($name);
+    });
+
+    dd($collection);
+});
